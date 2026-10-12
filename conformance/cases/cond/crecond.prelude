@@ -1,0 +1,29 @@
+trapint: procedure = .string
+  arg s = .string
+  do
+    v = crenum..parseint(s)
+    return "ok" v
+  on signal as c
+    return crecond..describe(c)
+  end
+  return "unreachable"
+
+trapfixed: procedure = .string
+  arg x = .string, places = .int
+  do
+    v = crenum..fixed(x, places)
+    return "ok" v
+  on signal as c
+    return crecond..describe(c)
+  end
+  return "unreachable"
+
+trapraise: procedure = .string
+  arg name = .string, text = .string
+  do
+    call crecond..raise(name, text)
+    return "no signal"
+  on signal as c
+    return crecond..describe(c)
+  end
+  return "unreachable"

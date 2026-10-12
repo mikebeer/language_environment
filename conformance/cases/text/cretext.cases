@@ -1,0 +1,49 @@
+# cretext conformance cases. Format: function | arguments | expected
+# Arguments use U+{hhhh} for non-ASCII characters; "|" separates fields.
+# Strings are the text between ' ' quotes. All results are integers.
+isdigit|'0'|1
+isdigit|'9'|1
+isdigit|'a'|0
+isdigit|''|0
+isdigit|'12'|0
+isdigit|'U+{0663}'|0
+isalpha|'a'|1
+isalpha|'Z'|1
+isalpha|'5'|0
+isalpha|'_'|0
+isalpha|'U+{00E9}'|0
+isalnum|'q'|1
+isalnum|'7'|1
+isalnum|'-'|0
+isspace|' '|1
+isspace|'U+{0009}'|1
+isspace|'U+{000A}'|1
+isspace|'U+{000D}'|1
+isspace|'x'|0
+isspace|'U+{00A0}'|0
+isupper|'A'|1
+isupper|'a'|0
+islower|'a'|1
+islower|'A'|0
+bytelen|''|0
+bytelen|'abc'|3
+bytelen|'U+{00E9}'|2
+bytelen|'U+{20AC}'|3
+bytelen|'U+{1F600}'|4
+bytelen|'aU+{00E9}U+{1F600}b'|8
+bytetocp|'abc',0|1
+bytetocp|'abc',2|3
+bytetocp|'abc',3|4
+bytetocp|'abc',4|-1
+bytetocp|'aU+{00E9}b',1|2
+bytetocp|'aU+{00E9}b',2|-1
+bytetocp|'aU+{00E9}b',3|3
+bytetocp|'aU+{00E9}b',4|4
+bytetocp|'abc',-1|-1
+cptobyte|'aU+{00E9}b',1|0
+cptobyte|'aU+{00E9}b',2|1
+cptobyte|'aU+{00E9}b',3|3
+cptobyte|'aU+{00E9}b',4|4
+cptobyte|'aU+{00E9}b',5|-1
+cptobyte|'aU+{00E9}b',0|-1
+cptobyte|'U+{1F600}x',2|4
