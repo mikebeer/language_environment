@@ -5,6 +5,8 @@
 | Phase | Goal | Output |
 |---|---|---|
 | 0 | Evidence | [Inventory](../inventory/INVENTORY.md) of what the language repos duplicate. **Done (draft).** |
+| 1a | v0 text, number, condition | `cretext`, `crenum`, `crecond`: specs, Level B reference code, 95 conformance cases passing on the CREXX VM. **Done (draft).** |
+| 3a | First port | LOGO on branch `cre-port` (mikebeer/LOGO). **Done**; see inventory |
 | 1 | Specify CRE-Core v0 | Specs for `env`, `prog`, `cond`, `msg`, `text`, `num`, `io`, `coll`, with language-neutral conformance cases written first |
 | 2 | Reference implementation | Level B libraries (plus RXPA only where needed) passing the Core suite on the CREXX VM on at least two different platforms |
 | 3 | Prove it on real languages | Port two implementations onto CRE: a small one (LOGO) and a mid-sized one (BASIC or SNOBOL). Measure lines removed and run time before and after. Port one compiler's runtime (`pasrt`) |

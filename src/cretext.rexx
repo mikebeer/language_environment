@@ -1,30 +1,30 @@
 /* cretext - CRE text services, v0 draft. See spec/text.md */
 options levelb
-namespace cretext expose cp isdigit isalpha isalnum isspace isupper islower bytelen bytetocp cptobyte
+namespace cretext expose isdigit isalpha isalnum isspace isupper islower bytelen bytetocp cptobyte
 import rxfnsb
 import rxunicode
 
 /* codepoint value of the single character c, or -1 if c is not one character */
-cp: procedure = .int
+cpval: procedure = .int
   arg c = .string
   if length(c) <> 1 then return -1
   return c2d(c)
 
 isdigit: procedure = .int
   arg c = .string
-  n = cp(c)
+  n = cpval(c)
   if n >= 48 & n <= 57 then return 1
   return 0
 
 isupper: procedure = .int
   arg c = .string
-  n = cp(c)
+  n = cpval(c)
   if n >= 65 & n <= 90 then return 1
   return 0
 
 islower: procedure = .int
   arg c = .string
-  n = cp(c)
+  n = cpval(c)
   if n >= 97 & n <= 122 then return 1
   return 0
 
@@ -41,7 +41,7 @@ isalnum: procedure = .int
 /* space, tab, LF, VT, FF, CR */
 isspace: procedure = .int
   arg c = .string
-  n = cp(c)
+  n = cpval(c)
   if n = 32 | (n >= 9 & n <= 13) then return 1
   return 0
 

@@ -41,7 +41,7 @@ CRE adopts the same shape:
 | Condition handling | One language-neutral condition model that each language maps onto |
 | Message services | Shared message catalogs and output destinations |
 | Storage management | Common value model and ownership rules for data shared across languages |
-| Common execution library | `cre..*` core libraries |
+| Common execution library | `cre*` core libraries |
 | Language-specific libraries | Personality layers (Rexx BIFs, a Pascal RTL, ...) built over CRE |
 | Compiler-writer interfaces | The CRE compiler-writer interface (doc 05) |
 | Callable services | Namespaced, typed, versioned procedures |

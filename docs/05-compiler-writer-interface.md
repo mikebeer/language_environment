@@ -29,7 +29,7 @@ linkage convention for the second.
 3. **Types.** Mapping of language types to `.int`, `.float`, `.decimal`,
    `.string`, `.binary`, arrays, objects. Integer width is a queried capability.
 4. **Text.** All text is `.string` (Unicode). Charset conversion only through
-   `cre..text` codecs at I/O boundaries.
+   `cretext` codecs at I/O boundaries.
 5. **Conditions.** How a frontend registers handlers, raises conditions, and maps
    its error constructs (doc 03).
 6. **Values shared across languages.** Ownership, copy and mutation rules for

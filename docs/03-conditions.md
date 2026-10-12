@@ -1,5 +1,7 @@
 # 03 - Condition model
 
+> **Superseded in part (v0 work).** CRE uses CREXX's own `.signal` objects, handlers and `ON SIGNAL` blocks; it does not add a parallel condition model. The accepted v0 convention is in [../spec/cond.md](../spec/cond.md). The sections below remain useful as the catalogue of per-language error models to map onto `.signal`.
+
 Every implementation in the survey has its own error mechanism and its own
 message texts. LE solves this with one condition model that languages map onto.
 CRE does the same. This is the draft.
@@ -44,13 +46,13 @@ innermost handler.
   `handler-case` need)
 
 If no handler takes it, the **default action** depends on severity: report
-through `cre..msg`, set the return code, and terminate for `SEVERE` and above.
+through `cremsg`, set the return code, and terminate for `SEVERE` and above.
 
 **Failure is not a condition.** SNOBOL4 and Prolog-style failure, and ordinary
 status results, are control flow in the language. CRE does not turn them into
 conditions.
 
-**Messages.** `cre..msg` provides catalogs keyed by facility and message id, with
+**Messages.** `cremsg` provides catalogs keyed by facility and message id, with
 locale selection (the compiler already ships catalogs for `en_GB`, `en_US`,
 `de_DE`, `nl_NL`), and one output destination so messages from all languages
 interleave in order. Languages add their own catalogs under their own facility.

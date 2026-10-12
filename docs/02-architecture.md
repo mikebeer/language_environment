@@ -1,12 +1,14 @@
 # 02 - Architecture
 
+> **Naming and scope corrected.** A CREXX namespace is a single token, so modules are `cretext`, `crenum`, `crecond`, ... (not `cre..text`). CRE is a thin contract, profile and conformance layer over the existing library family, with new code only where the library has a gap. Exposed names are collision-prone: a module exposes only its documented API (found when LOGO's `cp` collided with a helper).
+
 ## Layers
 
 ```
   Languages (personalities)   Rexx BIFs | Pascal RTL | BASIC | SNOBOL | Lisp | ...
   ---------------------------------------------------------------------------
-  CRE services                cre..text  cre..num  cre..cond  cre..msg  cre..io
-                              cre..coll  cre..math cre..time  cre..prog cre..env
+  CRE services                cretext  crenum  crecond  cremsg  creio
+                              crecoll  cremath cretime  creprog creenv
   ---------------------------------------------------------------------------
   Host layer                  capability query + providers (per platform)
   ---------------------------------------------------------------------------
@@ -35,7 +37,7 @@ wherever the capability exists.
 - Inside CRE, text is Unicode text: CREXX `.string` (valid UTF-8, codepoint-level
   operations). Bytes are `.binary`. No CRE service accepts or returns "bytes that
   are really text".
-- Moving between text and bytes happens only through `cre..text` codecs:
+- Moving between text and bytes happens only through `cretext` codecs:
   `encode(text, charset) -> .binary` and `decode(.binary, charset) -> text`.
   Charsets are named (UTF-8, ISO-8859-1, UTF-16, IBM code pages, ...). UTF-8 is
   always available; the rest are discoverable.
@@ -50,7 +52,7 @@ wherever the capability exists.
 ### Numbers
 
 - Integer width is a capability (`int.bits`), not an assumption. CRE services do
-  not rely on 64-bit integers; `cre..num` provides exact wide-integer
+  not rely on 64-bit integers; `crenum` provides exact wide-integer
   arithmetic (big integers) so results do not depend on the machine word.
   (Release 1 of CREXX fixes `rxinteger` at signed 64-bit; the CREXX roadmap is
   still evaluating a narrower profile. CRE follows whatever the project decides.)
@@ -78,7 +80,7 @@ them; unsupported use raises a defined condition.
 
 ## Capabilities and profiles
 
-`cre..env` exposes the capability list (`has("net")`, `int.bits`, `charsets`,
+`creenv` exposes the capability list (`has("net")`, `int.bits`, `charsets`,
 `records`, ...) and the CRE version. A **profile** is a named set of modules a
 platform claims:
 

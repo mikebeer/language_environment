@@ -18,7 +18,7 @@ implementations never contain platform-specific code.
 
 ## Status
 
-Draft 0. Design only; no CRE code yet. Nothing here is accepted by the CREXX
+Draft 0. Design docs plus a first working slice: `cretext`, `crenum`, `crecond` in `src/`, specs in `spec/`, and a conformance suite in `conformance/` (95 cases, run with `sh conformance/driver/run.sh <rxc-bin-dir>`). Nothing here is accepted by the CREXX
 project (Adrian Sutherland is chief architect). Treat it as input to that
 discussion.
 
@@ -29,11 +29,13 @@ discussion.
 | [docs/01-vision.md](docs/01-vision.md) | Goals, non-goals, the LE lessons we copy and the ones we do not |
 | [docs/02-architecture.md](docs/02-architecture.md) | Layers, the two-tier split, profiles, packaging |
 | [docs/03-conditions.md](docs/03-conditions.md) | The language-neutral condition model, with per-language mappings |
-| [docs/04-services.md](docs/04-services.md) | Draft v0 service catalog (`cre..*` namespaces) |
+| [docs/04-services.md](docs/04-services.md) | Draft v0 service catalog (`cre*` namespaces) |
 | [docs/05-compiler-writer-interface.md](docs/05-compiler-writer-interface.md) | What a new frontend must follow (outline and open questions) |
 | [docs/06-roadmap.md](docs/06-roadmap.md) | Phases, alignment with the CREXX release train, open decisions |
 | [docs/07-level-l-alignment.md](docs/07-level-l-alignment.md) | How CRE fits CREXX Level L (text, Unicode data, errors, naming) |
 | [inventory/INVENTORY.md](inventory/INVENTORY.md) | Survey of 12 language repos: what they duplicate, and what platform differences they each work around |
+| [spec/](spec/) | v0 specs: text, num, cond |
+| [src/](src/) | Reference implementation in CREXX Level B |
 | [conformance/README.md](conformance/README.md) | Plan for the conformance suite |
 
 ## Principles

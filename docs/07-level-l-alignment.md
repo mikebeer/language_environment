@@ -37,10 +37,7 @@ points: text and offsets, Unicode data, errors and diagnostics, and naming.
    `unicode.version`, and runtime classification reuses Level L's property data
    (or the same tables) so a generated lexer and a runtime check agree on what a
    letter is.
-3. **Normalisation and case folding.** Level L explicitly leaves these to the
-   application ("implement these explicitly in your application's name
-   handling"). Every Level L language with case-insensitive names needs them.
-   This is a strong reason for an Ext module (`creunicode`) built on `rxunicode`.
+3. **Normalisation and case folding.** Level L leaves these to the application. CREXX's `rxunicode` already provides them (`toNFC`, `toCasefold`, graphemes, `version()`), so no CRE module is needed; Level L languages should call `rxunicode` for name comparison. Open check: `rxunicode..version()` and Level L's `unicodeversion()` should agree.
 4. **Errors: status codes versus signals.** Level L reports parse failures as
    request status (0, 1, 2, 3, 5) plus `offset()` and `error()`, not as `.signal`.
    That is correct for a parser and CRE should not override it. CRE conditions
@@ -70,7 +67,7 @@ the same CRE modules, so both kinds share one runtime.
 ## Consequences for the plan
 
 - Spec work in `cretext` includes the offset conversion (point 1).
-- `creunicode` moves from "later" to "needed soon" (points 2 and 3).
+- No `creunicode` module: `rxunicode` covers it. CRE only reports the Unicode data version and checks it matches Level L (point 2).
 - `crecond` includes the status-to-signal helper (point 4); it does not replace
   Level L statuses.
 - Review the unread Level L sections and revise this note before the specs are

@@ -146,3 +146,27 @@ Ranked by how many implementations need it and how costly it is to get right:
 - The C89 family is not yet part of the matrix because its code is not
   procedure-pattern comparable; its needs are summarised from libc usage and
   portability notes above.
+
+## Standard-library cross-check and first port (added after building CRE v0)
+
+Checking the CREXX library showed that part of the duplication above is repos
+not using what already exists: `rxunicode` (codecs, normalisation, case folding,
+graphemes), `rxfnsb`, `rxfloat`, `rxdecimal`, collections and datetime. CRE
+therefore stays thin: a contract and conformance layer, with new code only for
+gaps (character classification, byte/codepoint offsets, strict number syntax,
+the failure convention).
+
+**LOGO port** (branch `cre-port` in mikebeer/LOGO, one file, `logo.crexx`):
+
+| Measure | Result |
+|---|---|
+| Lines | 8 added, 18 removed (net -10) |
+| Replaced | `isws`, `isdigitc` (private) by `cretext..isspace`, `cretext..isdigit`; `datatype`-based `isnum` by `crenum..isdecimal` |
+| Output | Four example programs: SVG byte-identical to before; built-in demo output identical |
+| Behaviour change | Whitespace now also includes VT and FF (cretext definition); numbers no longer accept surrounding blanks or ones `datatype` accepted that `isdecimal` rejects |
+| Finding | Exposed names collide across modules (`cp`); modules must expose only documented API |
+
+The saving is small because LOGO's own helpers were small. The value is shared,
+tested behaviour, not line count. The larger duplicates (error models, float
+formatting, output plumbing) need `crecond` payloads and a float formatting
+rule, which are not in v0.
