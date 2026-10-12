@@ -12,6 +12,8 @@
 | 5 | Rexx as a client | Rexx built-ins implemented over CRE as a personality |
 | 6 | Decide on C89 `libcre` | Whether the C89 implementations share the same specification |
 
+See [07-level-l-alignment.md](07-level-l-alignment.md) for how Phase 1 fits Level L.
+
 Phase 1 begins with the three areas that are both most duplicated and most
 platform-sensitive: **text, number conversion/formatting, and conditions**.
 

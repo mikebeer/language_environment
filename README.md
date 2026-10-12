@@ -32,6 +32,7 @@ discussion.
 | [docs/04-services.md](docs/04-services.md) | Draft v0 service catalog (`cre..*` namespaces) |
 | [docs/05-compiler-writer-interface.md](docs/05-compiler-writer-interface.md) | What a new frontend must follow (outline and open questions) |
 | [docs/06-roadmap.md](docs/06-roadmap.md) | Phases, alignment with the CREXX release train, open decisions |
+| [docs/07-level-l-alignment.md](docs/07-level-l-alignment.md) | How CRE fits CREXX Level L (text, Unicode data, errors, naming) |
 | [inventory/INVENTORY.md](inventory/INVENTORY.md) | Survey of 12 language repos: what they duplicate, and what platform differences they each work around |
 | [conformance/README.md](conformance/README.md) | Plan for the conformance suite |
 
