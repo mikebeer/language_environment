@@ -1,6 +1,6 @@
 # cretext v0 (draft)
 
-Namespace `cretext`. Source: `src/cretext.rexx`. Cases: `conformance/cases/text/cretext.cases`.
+Namespace `cretext`. Source: `src/cretext.crexx`. Cases: `conformance/cases/text/cretext.cases`.
 
 ## Scope
 

@@ -1,6 +1,6 @@
 # crecond v0 (draft)
 
-Namespace `crecond`. Source: `src/crecond.rexx`. Cases: `conformance/cases/cond/crecond.cases`.
+Namespace `crecond`. Source: `src/crecond.crexx`. Cases: `conformance/cases/cond/crecond.cases`.
 
 ## Decision: use `.signal`
 

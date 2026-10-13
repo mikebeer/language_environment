@@ -1,6 +1,6 @@
 # creio v0 (draft)
 
-Namespace `creio`. Source: `src/creio.rexx`. Test: `conformance/driver/run_io.sh`.
+Namespace `creio`. Source: `src/creio.crexx`. Test: `conformance/driver/run_io.sh`.
 
 ## Why
 

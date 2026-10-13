@@ -1,6 +1,6 @@
 # crenum v0 (draft)
 
-Namespace `crenum`. Source: `src/crenum.rexx`. Cases: `conformance/cases/num/crenum.cases`.
+Namespace `crenum`. Source: `src/crenum.crexx`. Cases: `conformance/cases/num/crenum.cases`.
 
 ## Scope
 
