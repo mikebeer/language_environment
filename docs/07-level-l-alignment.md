@@ -1,11 +1,9 @@
 # 07 - Alignment with CREXX Level L
 
-Source: the *cREXX / Level L user guide* (spec language, generated lexers and
-parsers, runtime API, errors and recovery). Sections read so far: overview,
-lexical rules and Unicode, runtime API, trees, error messages and recovery.
-**Not yet reviewed:** command line and build integration, resource limits, the
-RexxScript example, troubleshooting. Conclusions below are provisional for
-those areas.
+Source: the *cREXX / Level L user guide*, read in full (overview, spec language,
+lexical rules and Unicode, comments, parser rules and operators, token stages and
+regions, runtime API, trees and projection, errors and recovery, command line and
+build, resource limits, the RexxScript example, troubleshooting, glossary).
 
 ## Verdict
 
@@ -72,3 +70,40 @@ the same CRE modules, so both kinds share one runtime.
   Level L statuses.
 - Review the unread Level L sections and revise this note before the specs are
   frozen.
+
+## Further alignment points from the full read
+
+7. **Diagnostics already count codepoints.** `llsource..diagnostic` converts a byte
+   offset to a one-based line and column, columns counting Unicode scalar values,
+   and recognises CRLF, CR and LF. That is the same unit as `cretext` indexing, so
+   CRE should call it rather than duplicate it, and `bytetocp` must agree with it.
+8. **Keywords are ASCII case-insensitive by design.** Level L token stages compare
+   text "ignoring ASCII case"; names keep their spelling and Unicode normalisation
+   or folding is the application's job (use `rxunicode`). This matches cretext v0
+   classification being ASCII-only; BASIC and SNOBOL keywords need nothing more.
+9. **Status codes, not signals, for the front end** (0 success, 1 invalid input,
+   2 resource allowance exhausted, 3 invalid configuration, 5 no unique tree;
+   recovery adds 4). A CRE language should report front-end failures the same
+   way and raise `.signal` only for run-time errors.
+10. **Build integration.** Level L is built with `levell spec --rxas` (exit 0, 1, 2),
+    written safely through `lib/rxfnsl/tools/generate.cmake`, then assembled and
+    linked like any module. CRE libraries are ordinary `.rxbin` modules, so a
+    Level L language links them the same way; no special support is needed.
+11. **Fixed limits to respect.** Token IDs 1-255; recursion depth ceilings 128
+    (specification) and 512 (LL, PEG, Pratt, forests); `source.bytes` default
+    1,048,576. CRE services used on the parse path must not assume larger inputs.
+12. **Value semantics copy.** Definitions, requests and trees are values; passing a
+    whole tree by value can copy it. CRE collection and text services that accept
+    trees or large strings should be documented with their copy behaviour.
+13. **Positions are original-source byte offsets, comments and whitespace
+    included.** A CRE interpreter that keeps line numbers (BASIC) can derive them
+    from offsets instead of re-scanning.
+14. **Optional future step.** BASIC's and SNOBOL's hand-written tokenizers could be
+    replaced by Level L lexers. That is a separate decision from the CRE port and
+    is not part of it.
+
+## Result of the review
+
+No conflict was found. Everything in Level L that touches runtime services
+(Unicode data, diagnostics, status model, namespace style) is either already used
+by CRE or listed above as an alignment rule. Decisions 1 to 6 are unchanged.
