@@ -18,9 +18,13 @@ implementations never contain platform-specific code.
 
 ## Status
 
-Draft 0. Design docs plus a first working slice: `cretext`, `crenum`, `crecond` in `src/`, specs in `spec/`, and a conformance suite in `conformance/` (95 cases, run with `sh conformance/driver/run.sh <rxc-bin-dir>`). Nothing here is accepted by the CREXX
+Draft 0. Design docs plus a first working slice: `cretext`, `crenum`, `crecond`, `creio` in `src/`, specs in `spec/`, and a conformance suite in `conformance/` (108 cases, run with `sh conformance/driver/run.sh <rxc-bin-dir>`). Nothing here is accepted by the CREXX
 project (Adrian Sutherland is chief architect). Treat it as input to that
 discussion.
+
+## Ports
+
+LOGO, BASIC and SNOBOL4 run on CRE (branch `cre-port` in each repository): [LOGO](https://github.com/mikebeer/LOGO/tree/cre-port), [BASIC](https://github.com/mikebeer/basic/tree/cre-port), [SNOBOL4](https://github.com/mikebeer/snobol/tree/cre-port). Details in [docs/08-ports.md](docs/08-ports.md).
 
 ## Contents
 
@@ -34,6 +38,7 @@ discussion.
 | [docs/06-roadmap.md](docs/06-roadmap.md) | Phases, alignment with the CREXX release train, open decisions |
 | [docs/07-level-l-alignment.md](docs/07-level-l-alignment.md) | How CRE fits CREXX Level L (text, Unicode data, errors, naming) |
 | [inventory/INVENTORY.md](inventory/INVENTORY.md) | Survey of 12 language repos: what they duplicate, and what platform differences they each work around |
+| [docs/08-ports.md](docs/08-ports.md) | LOGO, BASIC and SNOBOL ported onto CRE: branches, results, findings |
 | [spec/](spec/) | v0 specs: text, num, cond |
 | [src/](src/) | Reference implementation in CREXX Level B |
 | [conformance/README.md](conformance/README.md) | Plan for the conformance suite |

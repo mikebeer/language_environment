@@ -170,3 +170,5 @@ The saving is small because LOGO's own helpers were small. The value is shared,
 tested behaviour, not line count. The larger duplicates (error models, float
 formatting, output plumbing) need `crecond` payloads and a float formatting
 rule, which are not in v0.
+
+**BASIC and SNOBOL ports** are in [../docs/08-ports.md](../docs/08-ports.md): 13 of 13 and 10 of 10 tests pass unchanged; the output, character-class and float-literal duplicates are gone; error models and file I/O remain.
