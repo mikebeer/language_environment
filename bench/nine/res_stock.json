@@ -1,0 +1,1003 @@
+[
+ {
+  "lang": "pascal",
+  "name": "algos",
+  "min": 0.20268802500004313,
+  "med": 0.21234990000004927,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "control",
+  "min": 0.11199714000002814,
+  "med": 0.12070423500000516,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "fib",
+  "min": 0.11634115700002212,
+  "med": 0.1178745670000012,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "input",
+  "min": 0.08957060300002695,
+  "med": 0.09547134100000676,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "nested",
+  "min": 0.09927226300004577,
+  "med": 0.11125434499996345,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "pointers",
+  "min": 0.1726458040000125,
+  "med": 0.17462389700000358,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "reals",
+  "min": 0.18238367199995764,
+  "med": 0.19885136900001044,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "records",
+  "min": 0.10920223899995563,
+  "med": 0.11651835699996127,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "sieve",
+  "min": 0.08999434999998357,
+  "med": 0.09211061299998846,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "strings",
+  "min": 0.14454074700000774,
+  "med": 0.15548241700003018,
+  "ok": true
+ },
+ {
+  "lang": "pascal",
+  "name": "tree",
+  "min": 0.25624451400000225,
+  "med": 0.2665000840000289,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "basics",
+  "min": 0.13072081799998614,
+  "med": 0.15708960700004582,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "control",
+  "min": 0.13695888000000878,
+  "med": 0.15209604400001808,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "data",
+  "min": 0.15695090299999492,
+  "med": 0.1653122349999876,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "errors",
+  "min": 0.14016370999996752,
+  "med": 0.14585600199995952,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "format",
+  "min": 0.1349705470000231,
+  "med": 0.13664063100003432,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "functions",
+  "min": 1.6444628970000394,
+  "med": 1.7019499769999697,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "loop",
+  "min": 0.17463582599998517,
+  "med": 0.1901012499999979,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "macros",
+  "min": 0.13789066200001798,
+  "med": 0.14126383600000736,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "misc",
+  "min": 0.1568873490000442,
+  "med": 0.18266882699998632,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "programs",
+  "min": 0.3049463199999991,
+  "med": 0.30605277999995906,
+  "ok": true
+ },
+ {
+  "lang": "lisp",
+  "name": "readline",
+  "min": 0.13254070300001786,
+  "med": 0.1382002679999914,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "01_classes_basic",
+  "min": 1.2499098330000038,
+  "med": 1.3440301570000202,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "02_misc",
+  "min": 1.1745765120000442,
+  "med": 1.2381786239999997,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "03_exceptions",
+  "min": 1.2156755570000541,
+  "med": 1.2318938619999926,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "04_collections",
+  "min": 1.2422829330000695,
+  "med": 1.3115559299999404,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "05_strings",
+  "min": 1.2554500950000147,
+  "med": 1.3356482179999603,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "06_numbers",
+  "min": 1.2317949380000073,
+  "med": 1.2333533290000105,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "07_objects",
+  "min": 2.158122349999985,
+  "med": 2.1896163920000618,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "08_files_dates",
+  "min": 1.1875417699999389,
+  "med": 1.2409862580000208,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "09_extras",
+  "min": 1.2368133659999785,
+  "med": 1.3733078719999412,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "10_structures",
+  "min": 1.1538854629999378,
+  "med": 1.1671953889999713,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "11_lists_json",
+  "min": 1.2011690890000182,
+  "med": 1.2130260189999262,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "12_parsing_system",
+  "min": 1.172155799000052,
+  "med": 1.2203005100000155,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "13_regex",
+  "min": 1.249669656999913,
+  "med": 1.2524010529999714,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "14_files_system",
+  "min": 1.4194756940000843,
+  "med": 1.458907245999967,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "15_repl",
+  "min": 1.1399825580000424,
+  "med": 1.2214797869999074,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "16_net",
+  "min": 1.1918447070000866,
+  "med": 1.2069091079999907,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "17_sunit",
+  "min": 1.2531740140000238,
+  "med": 1.2592855479999798,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "18_context_compile",
+  "min": 1.1441329079999605,
+  "med": 1.201651280999954,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "19_processes",
+  "min": 1.3423630849999881,
+  "med": 1.346104844000024,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "20_more",
+  "min": 1.2007170320000569,
+  "med": 1.2086301150000054,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "21_scaled_become",
+  "min": 1.2226465869999856,
+  "med": 1.2532559279999305,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "22_heap_timespan",
+  "min": 1.164809425000044,
+  "med": 1.219538645000057,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "23_unicode",
+  "min": 1.201830634000089,
+  "med": 1.2424306019998994,
+  "ok": true
+ },
+ {
+  "lang": "smalltalk",
+  "name": "24_more2",
+  "min": 1.2069096139999829,
+  "med": 1.2786977490000027,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "01_basics",
+  "min": 1.6311462209999945,
+  "med": 1.6316518854999913,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "02_strings",
+  "min": 1.5983891680000397,
+  "med": 1.6083959125000433,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "03_control",
+  "min": 1.511877916000003,
+  "med": 1.529688335000003,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "04_functions",
+  "min": 1.635850423000079,
+  "med": 1.659138272000007,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "05_collections",
+  "min": 1.4795662440000115,
+  "med": 1.5030145279999942,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "06_classes",
+  "min": 1.4866203169999608,
+  "med": 1.501605874500001,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "07_exceptions",
+  "min": 1.517592522999962,
+  "med": 1.5228914764999786,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "08_iter_gen",
+  "min": 1.5450719750000417,
+  "med": 1.5854797155000142,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "09_algos",
+  "min": 1.6446651720000318,
+  "med": 1.6511894645000211,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "10_misc",
+  "min": 2.00600727799997,
+  "med": 2.048835064000002,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "11_numpy",
+  "min": 1.5293365920000497,
+  "med": 1.5627383670000086,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "12_stdlib",
+  "min": 2.108857510000007,
+  "med": 2.160190465000028,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "13_pandas",
+  "min": 3.1970446799999763,
+  "med": 3.2912996520000206,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "14_scipy",
+  "min": 3.9325137749999612,
+  "med": 4.028849380499992,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "15_import",
+  "min": 1.4777409399999897,
+  "med": 1.538566048000007,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "16_linalg_random",
+  "min": 5.53349429299999,
+  "med": 5.914959700499992,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "17_language2",
+  "min": 1.5747588330000326,
+  "med": 1.6114420834999805,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "18_re",
+  "min": 12.94341817499992,
+  "med": 13.27262623799993,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "19_modules",
+  "min": 2.366264237999985,
+  "med": 2.3677902800000084,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "20_pandas2",
+  "min": 4.189508939999996,
+  "med": 4.218834454499984,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "21_scipy2",
+  "min": 4.424362594000058,
+  "med": 4.717050895999989,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "22_complex",
+  "min": 2.0339825060000294,
+  "med": 2.047542399500003,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "23_new_subclass",
+  "min": 1.634312475999991,
+  "med": 1.6475521644999844,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "24_sockets",
+  "min": 1.5991162910000867,
+  "med": 1.619452914500073,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "25_fft",
+  "min": 2.0359332189999577,
+  "med": 2.1330730879999464,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "26_pandas_dt",
+  "min": 2.9629754599999387,
+  "med": 3.0447760954999694,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "27_pandas_dt2",
+  "min": 8.30030983100005,
+  "med": 8.492679079000027,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "28_fft_more",
+  "min": 4.90002060900008,
+  "med": 4.99309555550002,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "29_np_dtype_pkg",
+  "min": 2.0383342879999873,
+  "med": 2.099036266500036,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "30_eig",
+  "min": 6.45984459400006,
+  "med": 6.489798115000042,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "31_gc",
+  "min": 4.018253511000012,
+  "med": 4.103424101500025,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "32_frozenset",
+  "min": 1.6333652659999416,
+  "med": 1.6568469685000196,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "33_hashing",
+  "min": 1.5558100709999962,
+  "med": 1.5664432385000282,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "34b_hash_values",
+  "min": 1.5559922539999889,
+  "med": 1.5774049234999552,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "35_match_walrus",
+  "min": 1.7056698940000388,
+  "med": 1.720806137000011,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "36_random",
+  "min": 4.52474247400005,
+  "med": 4.549594605000038,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "37_hashlib",
+  "min": 8.695172965999973,
+  "med": 8.872091887500005,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "38_base64",
+  "min": 1.8997540359999903,
+  "med": 1.9016174270000192,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "39_urllib_parse",
+  "min": 1.796008559000029,
+  "med": 1.8671196464999866,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "40_difflib",
+  "min": 1.8706858000000466,
+  "med": 1.9084090105000087,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "41_threading_queue",
+  "min": 1.7395594170000095,
+  "med": 1.7403459265000265,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "42_small_mods",
+  "min": 2.533975158999965,
+  "med": 2.5427111865000143,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "43_pathlib",
+  "min": 1.8686200149999195,
+  "med": 1.8688739449999616,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "44_pathlib_fs",
+  "min": 1.8090883800000483,
+  "med": 1.8247194285000319,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "45_tempfile_shutil_glob",
+  "min": 2.1226712410000346,
+  "med": 2.1266606120000233,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "46_calendar",
+  "min": 1.786460017999957,
+  "med": 1.9981338270000037,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "47_configparser",
+  "min": 1.837427645000048,
+  "med": 1.860144729500007,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "48_tomllib",
+  "min": 1.7523339340000348,
+  "med": 1.7607516920000421,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "49_zlib_gzip",
+  "min": 11.07716257100003,
+  "med": 11.103067453500046,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "50_zipfile",
+  "min": 2.192749182000057,
+  "med": 2.195804860999999,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "51_random_exact",
+  "min": 8.057750805000069,
+  "med": 8.06155175750007,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "52_argparse",
+  "min": 2.4955495540000356,
+  "med": 2.6307515105000334,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "53_pickle",
+  "min": 10.980941305999977,
+  "med": 11.349077364499976,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "54_misc_stubs",
+  "min": 2.188388907999979,
+  "med": 2.2036047519999897,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "55_pytime",
+  "min": 1.880501965999997,
+  "med": 1.9168125744999998,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "56_logging",
+  "min": 2.2732909229999905,
+  "med": 2.321102230500003,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "57_unittest",
+  "min": 2.7759633370000074,
+  "med": 2.7958615704999943,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "58_numbers_locale_zoneinfo",
+  "min": 1.6843256729999894,
+  "med": 1.685257135000029,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "59_array",
+  "min": 1.6481678409999176,
+  "med": 1.6571322239999517,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "60_http_client",
+  "min": 1.7428097040000239,
+  "med": 1.7734946590000504,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "61_numpy_rng_core",
+  "min": 16.102547581999943,
+  "med": 16.44318950899998,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "62_numpy_random_api",
+  "min": 2.70400693199997,
+  "med": 2.797558997500005,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "63_logging_handlers",
+  "min": 2.1277496730000394,
+  "med": 2.2302591855000173,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "64_os_time_native",
+  "min": 2.3678629209999826,
+  "med": 2.374744251499976,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "65_socket_makefile",
+  "min": 1.5314496099999815,
+  "med": 1.5446945475000575,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "66_runtime_gaps",
+  "min": 1.9332958069999222,
+  "med": 1.9358257049999565,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "67_introspection",
+  "min": 2.1603198249999878,
+  "med": 2.1690449824999405,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "68_metaclass_enum",
+  "min": 1.5604108049999468,
+  "med": 1.5787188790000073,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "69_pandas_tz",
+  "min": 3.2741367390001415,
+  "med": 3.3279952144999925,
+  "ok": true
+ },
+ {
+  "lang": "python",
+  "name": "70_matplotlib_svg",
+  "min": 32.43018773500012,
+  "med": 32.70293744800006,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "arith",
+  "min": 0.10938778500008084,
+  "med": 0.12472818700007338,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "control",
+  "min": 0.15541052999992644,
+  "med": 0.16392749900001036,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "data",
+  "min": 0.10983516999999665,
+  "med": 0.11197459300001356,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "divzero",
+  "min": 0.0806675379999433,
+  "med": 0.08780537400002686,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_args",
+  "min": 0.050873708999915834,
+  "med": 0.054497851999940394,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_dup",
+  "min": 0.05215845900011118,
+  "med": 0.05259060799994586,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_end",
+  "min": 0.05576053499999034,
+  "med": 0.05656825000005483,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_label",
+  "min": 0.05805596699997295,
+  "med": 0.059756830999958765,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_nested",
+  "min": 0.054096139999955994,
+  "med": 0.06157025099992097,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_number",
+  "min": 0.05475825100006659,
+  "med": 0.05477785100015353,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_semicolon",
+  "min": 0.05394430100000136,
+  "med": 0.05698153200000888,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_string",
+  "min": 0.05058335800003988,
+  "med": 0.054373121000026,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_subscript",
+  "min": 0.05596262599988222,
+  "med": 0.058768927000073745,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_type",
+  "min": 0.056659620999880644,
+  "med": 0.05717539099987334,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_undeclared",
+  "min": 0.05476922899993042,
+  "med": 0.059070840000003955,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "err_value",
+  "min": 0.050310920000129045,
+  "med": 0.054745906000107425,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "io",
+  "min": 0.09771174799993787,
+  "med": 0.09853457300005175,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "lists",
+  "min": 0.10469537399990259,
+  "med": 0.10798420099990835,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "misc",
+  "min": 0.0868078810001407,
+  "med": 0.0870659520001027,
+  "ok": true
+ },
+ {
+  "lang": "plm",
+  "name": "procs",
+  "min": 0.09943682300013279,
+  "med": 0.10001487499994255,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "data",
+  "min": 0.16717975899996418,
+  "med": 0.17043165700010832,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "db",
+  "min": 0.17786799800001063,
+  "med": 0.1795925899998565,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "db2",
+  "min": 0.19276713699991888,
+  "med": 0.19500262900010057,
+  "ok": false
+ },
+ {
+  "lang": "xbase",
+  "name": "lang",
+  "min": 0.183562307000102,
+  "med": 0.18662946400013425,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "misc",
+  "min": 0.1874255909999647,
+  "med": 0.1958638159999282,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "oop",
+  "min": 0.17504176800002824,
+  "med": 0.18159048199981953,
+  "ok": true
+ },
+ {
+  "lang": "xbase",
+  "name": "ui",
+  "min": 0.18140917300002002,
+  "med": 0.1874034259999462,
+  "ok": true
+ }
+]

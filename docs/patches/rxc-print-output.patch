@@ -1,0 +1,29 @@
+diff --git a/compiler/rxcp_emit_core.c b/compiler/rxcp_emit_core.c
+index b962ec9d..e3de4962 100644
+--- a/compiler/rxcp_emit_core.c
++++ b/compiler/rxcp_emit_core.c
+@@ -729,10 +729,20 @@ void print_output(FILE* file, OutputFragment* existing) {
+     flat = malloc(length + 1);
+     if (!flat) RX_PANIC_OOM("malloc compiler flattened output", length + 1, 0);
+     flat[0] = 0;
+-    fragment = existing;
+-    while (fragment) {
+-        if (fragment->output) strcat(flat, fragment->output);
+-        fragment = fragment->after;
++    {
++        /* Append at a running tail: strcat() would rescan the whole
++         * buffer for every fragment (quadratic in program size). */
++        char *tail = flat;
++        fragment = existing;
++        while (fragment) {
++            if (fragment->output) {
++                size_t part = strlen(fragment->output);
++                memcpy(tail, fragment->output, part);
++                tail += part;
++            }
++            fragment = fragment->after;
++        }
++        *tail = 0;
+     }
+     combined = rxcp_combine_superinstructions(flat);
+     free(flat);

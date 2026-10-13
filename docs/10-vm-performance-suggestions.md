@@ -104,3 +104,17 @@ change, and the shared module is the one place to tune library code.
 - Callgrind attribution is from one BASIC workload.
 
 A Word version with five-language timings and before/after samples: [CREXX-VM-performance-suggestions.docx](CREXX-VM-performance-suggestions.docx). Micro-benchmark sources: bench/vm/.
+
+## Update 13 October 2026: nine implementations, compiler and assembler profiles
+
+All CREXX-based language implementations under mikebeer (LOGO, BASIC, SNOBOL4, PL/M, Lisp, Pascal,
+Smalltalk, Python, xBase) were built and their test suites timed on a stock VM and on a VM with
+`vm-startup.patch`. Results are in `bench/nine/` (harness `bench2.py`) and in the Word document.
+
+- **rxc is quadratic in output size.** 97% of its instructions are one `strcat` in `print_output`.
+  Fix: `docs/patches/rxc-print-output.patch`. Compile time: Lisp 8.7 s to 1.05 s, xBase 21.9 s to
+  1.7 s, Python interpreter 225 s to 18 s (with `rxas -n`). Generated assembly is byte-identical.
+- **vm-startup.patch** (from the python repo): suites 30% to 72% faster, single start 85 ms to 27 ms.
+- **rxas optimiser:** 69% of assembler time; `rxas -n` is 11x (Lisp) to 27x (Python) faster, and the
+  tests ran at the same speed with identical output.
+- Remaining Smalltalk start-up: module read and free are about 28% of instructions.
