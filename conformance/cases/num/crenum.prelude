@@ -1,0 +1,14 @@
+pf: procedure = .string
+  arg s = .string
+  f = crenum..parsefloat(s)
+  return crenum..realtext(f)
+
+pfbad: procedure = .string
+  arg s = .string
+  do
+    f = crenum..parsefloat(s)
+    return "no signal"
+  on signal as c
+    return strip(c.name())
+  end
+  return "unreachable"

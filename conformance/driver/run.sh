@@ -2,8 +2,8 @@
 # usage: run.sh BINDIR [NAMESPACE...]   builds src/*.rexx, runs conformance/cases/*/NAMESPACE.cases
 B=$1; shift
 C=$(cd "$(dirname "$0")/.." && pwd); R=$(dirname "$C")
-MODS="crecond crenum cretext"
-[ $# -eq 0 ] && set -- $MODS
+MODS="crecond creio crenum cretext"
+[ $# -eq 0 ] && set -- crecond crenum cretext
 W=$(mktemp -d); cp "$R"/src/*.rexx "$W/"; cd "$W" || exit 2
 BINS=""
 for m in $MODS; do

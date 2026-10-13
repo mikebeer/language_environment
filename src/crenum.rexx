@@ -1,6 +1,6 @@
 /* crenum - CRE number services, v0 draft. See spec/num.md */
 options levelb
-namespace crenum expose isint isdecimal parseint fixed
+namespace crenum expose isint isdecimal parseint fixed parsefloat realtext
 import rxfnsb
 import crecond
 
@@ -87,3 +87,18 @@ fixed: procedure = .string
     if verify(substr(r,2), "0.") = 0 then r = substr(r,2)
   end
   return r
+
+/* parse a plain decimal number (isdecimal syntax) to .float. Otherwise CONVERSION_ERROR */
+parsefloat: procedure = .float
+  arg s = .string
+  if isdecimal(s) = 0 then call crecond..raise("conversion_error", "not a decimal number")
+  d = s as .decimal
+  f = d as .float
+  return f
+
+/* text of a float: shortest form the runtime gives, exponent letter E, "nan" for NaN */
+realtext: procedure = .string
+  arg x = .float
+  if x \= x then return "nan"
+  s = x as .string
+  return translate(s, "E", "e")
