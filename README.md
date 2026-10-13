@@ -39,6 +39,7 @@ LOGO, BASIC and SNOBOL4 run on CRE (branch `cre-port` in each repository): [LOGO
 | [docs/07-level-l-alignment.md](docs/07-level-l-alignment.md) | How CRE fits CREXX Level L (text, Unicode data, errors, naming) |
 | [inventory/INVENTORY.md](inventory/INVENTORY.md) | Survey of 12 language repos: what they duplicate, and what platform differences they each work around |
 | [docs/08-ports.md](docs/08-ports.md) | LOGO, BASIC and SNOBOL ported onto CRE: branches, results, findings |
+| [docs/09-benchmark.md](docs/09-benchmark.md) | Speed and results with and without CRE for LOGO, BASIC, SNOBOL4 |
 | [spec/](spec/) | v0 specs: text, num, cond |
 | [src/](src/) | Reference implementation in CREXX Level B |
 | [conformance/README.md](conformance/README.md) | Plan for the conformance suite |

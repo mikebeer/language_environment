@@ -26,7 +26,7 @@ points: text and offsets, Unicode data, errors and diagnostics, and naming.
 
 1. **Byte offsets versus codepoint indices.** Level L reports every position as
    a zero-based byte offset; `cretext` indexes by codepoint. A language built on
-   both needs a defined conversion. Proposal: `cretext` gains `bytetocp(s, off)`
+   both needs a defined conversion. Proposal: `creutf8` provides `bytetocp(s, off)`
    and `cptobyte(s, idx)` (for `.string`) with conformance cases for multi-byte
    text. This is a real gap, not duplication.
 2. **One Unicode data source.** Level L carries Unicode 17.0.0 property data for
@@ -76,7 +76,7 @@ the same CRE modules, so both kinds share one runtime.
 7. **Diagnostics already count codepoints.** `llsource..diagnostic` converts a byte
    offset to a one-based line and column, columns counting Unicode scalar values,
    and recognises CRLF, CR and LF. That is the same unit as `cretext` indexing, so
-   CRE should call it rather than duplicate it, and `bytetocp` must agree with it.
+   CRE should call it rather than duplicate it, and `creutf8..bytetocp` must agree with it.
 8. **Keywords are ASCII case-insensitive by design.** Level L token stages compare
    text "ignoring ASCII case"; names keep their spelling and Unicode normalisation
    or folding is the application's job (use `rxunicode`). This matches cretext v0

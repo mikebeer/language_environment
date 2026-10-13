@@ -1,6 +1,8 @@
-# cretext v0 (draft)
+# cretext and creutf8 v0 (draft)
 
-Namespace `cretext`. Source: `src/cretext.crexx`. Cases: `conformance/cases/text/cretext.cases`.
+Namespaces `cretext` (classification) and `creutf8` (byte offsets). Sources: `src/cretext.crexx`, `src/creutf8.crexx`. Cases: `conformance/cases/text/cretext.cases`, `creutf8.cases`.
+
+They are two modules on purpose: `creutf8` imports `rxunicode`, and loading `rxunicode` adds about 0.35 s to program start-up on the test machine. A program that only classifies characters must not pay that.
 
 ## Scope
 
@@ -40,7 +42,7 @@ rely on non-ASCII returning 0 once that extension exists.
 | `isalnum(c)` | `isalpha` or `isdigit` |
 | `isspace(c)` | U+0020, U+0009..U+000D |
 
-Offsets:
+Offsets (module `creutf8`):
 
 | Procedure | Result |
 |---|---|

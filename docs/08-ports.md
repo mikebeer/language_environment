@@ -14,6 +14,8 @@ All runs on the CREXX VM `1.0.0-beta.3` built from source, by each repository's 
 `run_tests.sh` (or the example outputs for LOGO). The CRE conformance suite
 passes at the same time (108 cases: text 46, number 49, condition 10, streams 3).
 
+Speed and output comparison with and without CRE: [09-benchmark.md](09-benchmark.md).
+
 ## What moved to CRE
 
 | Was private in each language | Now |
