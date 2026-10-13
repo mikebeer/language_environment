@@ -1,6 +1,6 @@
 /* creio - CRE standard streams, v0 draft. See spec/io.md */
 options levelb
-namespace creio expose out err flush creio_hout creio_herr
+namespace creio expose out err flush hout herr creio_hout creio_herr
 import _rxsysb
 
 creio_hout = 0
@@ -33,3 +33,13 @@ err: procedure = .void
   assembler fwrite creio_herr, text
   assembler fflush rcx, creio_herr
   return
+
+/* handle of standard output, for programs that keep a table of output units */
+hout: procedure = .int
+  call setup
+  return creio_hout
+
+/* handle of standard error */
+herr: procedure = .int
+  call setup
+  return creio_herr

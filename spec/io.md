@@ -15,6 +15,7 @@ repeat the same `fwrite`/`fflush` sequence in private `outs`, `errs` and
 | `out(text)` | Write `text` (a `.string`, UTF-8) to standard output |
 | `err(text)` | Flush standard output, write `text` to standard error, flush standard error. Output and error text therefore appear in program order when both go to one terminal |
 | `flush()` | Flush standard output |
+| `hout()` / `herr()` | `.int` stream handles of standard output / error, for programs (SNOBOL, BASIC file units) that keep a table of units and write with `assembler fwrite handle, text`. Opened on first use |
 
 Handles are opened on first use. No end-of-line translation is done: the caller
 supplies line endings (`'0a'x`).

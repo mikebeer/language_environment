@@ -10,12 +10,16 @@ call creio..out "one" || '0a'x
 call creio..err "two" || '0a'x
 call creio..out "three" || '0a'x
 call creio..flush
+h = creio..hout()
+if h > 0 & creio..herr() > 0 then call creio..out "handles" || '0a'x
 X
 $B/rxc -i "$B" -l . creio.crexx >/dev/null && $B/rxas creio >/dev/null || exit 2
 $B/rxc -i "$B" -l . t.crexx >/dev/null 2>&1 && $B/rxas t >/dev/null || exit 2
 O=$($B/rxvm t creio 2>/dev/null); E=$($B/rxvm t creio 2>&1 >/dev/null); A=$($B/rxvm t creio 2>&1)
 [ "$O" = "one
-three" ] && [ "$E" = "two" ] && [ "$A" = "one
+three
+handles" ] && [ "$E" = "two" ] && [ "$A" = "one
 two
-three" ] && { echo "creio: passed 3 of 3"; exit 0; }
+three
+handles" ] && { echo "creio: passed 3 of 3"; exit 0; }
 echo "creio: FAILED"; printf 'stdout=[%s] stderr=[%s] merged=[%s]\n' "$O" "$E" "$A"; exit 1
