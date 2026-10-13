@@ -1,45 +1,66 @@
-/* cretext - CRE text services, v0 draft. See spec/text.md */
+/* cretext - CRE text services, v0 draft. See spec/text.md
+   Shape note: each procedure assigns length(c) to a local before using it, has no
+   helper call and no 'return length(...)' expression. The rxc inliner exports a
+   body for cross-module inlining only in that shape (measured on 1.0.0-beta.3), so
+   calls from other programs compile to inline code instead of a procedure call. */
 options levelb
 namespace cretext expose isdigit isalpha isalnum isspace isupper islower
 import rxfnsb
 
-/* codepoint value of the single character c, or -1 if c is not one character */
-cpval: procedure = .int
-  arg c = .string
-  if length(c) <> 1 then return -1
-  return c2d(c)
-
 isdigit: procedure = .int
   arg c = .string
-  n = cpval(c)
-  if n >= 48 & n <= 57 then return 1
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k >= 48 & k <= 57 then return 1
+  end
   return 0
 
 isupper: procedure = .int
   arg c = .string
-  n = cpval(c)
-  if n >= 65 & n <= 90 then return 1
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k >= 65 & k <= 90 then return 1
+  end
   return 0
 
 islower: procedure = .int
   arg c = .string
-  n = cpval(c)
-  if n >= 97 & n <= 122 then return 1
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k >= 97 & k <= 122 then return 1
+  end
   return 0
 
 isalpha: procedure = .int
   arg c = .string
-  if isupper(c) = 1 then return 1
-  return islower(c)
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k >= 65 & k <= 90 then return 1
+    if k >= 97 & k <= 122 then return 1
+  end
+  return 0
 
 isalnum: procedure = .int
   arg c = .string
-  if isalpha(c) = 1 then return 1
-  return isdigit(c)
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k >= 48 & k <= 57 then return 1
+    if k >= 65 & k <= 90 then return 1
+    if k >= 97 & k <= 122 then return 1
+  end
+  return 0
 
 /* space, tab, LF, VT, FF, CR */
 isspace: procedure = .int
   arg c = .string
-  n = cpval(c)
-  if n = 32 | (n >= 9 & n <= 13) then return 1
+  n = length(c)
+  if n = 1 then do
+    k = c2d(c)
+    if k = 32 | (k >= 9 & k <= 13) then return 1
+  end
   return 0

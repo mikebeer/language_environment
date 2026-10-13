@@ -94,3 +94,6 @@ so this is mostly noise). Small programs pay about 3 ms to load four extra modul
   and the regression tests.
 - The CRE modules are validated, not tuned. The cost model above (about 0.5 us per string
   built-in, 11 us per signal block) suggests where more time can be saved.
+
+See [10 - VM performance suggestions](10-vm-performance-suggestions.md) for the inlining
+experiment, a VM micro-benchmark and a list of improvements for the CREXX team.
