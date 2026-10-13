@@ -102,3 +102,5 @@ change, and the shared module is the one place to tune library code.
 - The "experimental inlinable" cretext drops the single-character check and is **not**
   production-safe; it is evidence only.
 - Callgrind attribution is from one BASIC workload.
+
+A Word version with five-language timings and before/after samples: [CREXX-VM-performance-suggestions.docx](CREXX-VM-performance-suggestions.docx). Micro-benchmark sources: bench/vm/.
